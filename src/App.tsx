@@ -3,16 +3,13 @@ import {
   ArrowDownRight,
   ArrowRight,
   BadgeCheck,
-  Bot,
   Code2,
   ExternalLink,
   Github,
   Globe2,
-  Linkedin,
   Mail,
   Menu,
   MessageCircle,
-  MonitorSmartphone,
   Smartphone,
   Sparkles,
   X,
@@ -191,7 +188,7 @@ function App() {
             <SectionHeading
               eyebrow="03 · PROYECTOS"
               title="Productos pensados desde el problema hasta la experiencia."
-              description="Una selección inicial de soluciones que combinan desarrollo, automatización y diseño funcional. Los visuales mostrados aquí son mockups ilustrativos, no capturas del producto final."
+              description="Tres proyectos reales que muestran desarrollo móvil, full stack, automatización e infraestructura. Los visuales son mockups ilustrativos; cada tarjeta enlaza al repositorio verificable del proyecto."
             />
           </Reveal>
           <div className="project-list">
@@ -250,7 +247,9 @@ function App() {
                 <ExternalAction href={siteConfig.links.whatsapp} className="contact-main"><MessageCircle size={21} /> WhatsApp <ArrowRight size={18} /></ExternalAction>
                 <ExternalAction href={siteConfig.links.email}><Mail size={19} /> Correo</ExternalAction>
                 <ExternalAction href={siteConfig.links.github}><Github size={19} /> GitHub</ExternalAction>
-                <ExternalAction href={siteConfig.links.linkedin}><Linkedin size={19} /> LinkedIn</ExternalAction>
+                {siteConfig.links.linkedin ? (
+                  <ExternalAction href={siteConfig.links.linkedin}>LinkedIn</ExternalAction>
+                ) : null}
               </div>
             </div>
           </Reveal>

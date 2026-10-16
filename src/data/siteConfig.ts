@@ -14,7 +14,7 @@ export type Project = {
   solution: string
   technologies: string[]
   href?: string
-  accent: 'backfire' | 'revup' | 'yavibot'
+  accent: 'petcare' | 'revup' | 'yavibot'
 }
 
 export const siteConfig = {
@@ -27,10 +27,9 @@ export const siteConfig = {
     availability: true,
   },
   links: {
-    // Reemplaza estos valores. Si quedan vacíos, la interfaz los mostrará como pendientes.
-    whatsapp: '', // Ejemplo: https://wa.me/593XXXXXXXXX
-    email: '', // Ejemplo: mailto:tu-correo@dominio.com
-    github: '',
+    whatsapp: 'https://wa.me/593987141307',
+    email: 'mailto:benjicool2002@hotmail.com',
+    github: 'https://github.com/drewcrx',
     linkedin: '',
     instagram: '',
   },
@@ -60,34 +59,43 @@ export const siteConfig = {
   ] satisfies Service[],
   projects: [
     {
-      name: 'BACKFIRE',
-      eyebrow: 'Gestión vehicular',
-      description: 'Historial de mantenimiento vehicular accesible mediante códigos QR y gestión centralizada de información.',
-      problem: 'La información de mantenimientos suele quedar dispersa y es difícil consultarla rápidamente.',
-      solution: 'Una experiencia móvil para registrar vehículos, consultar su historial y acceder a información mediante QR.',
-      technologies: ['Flutter', 'Express', 'PostgreSQL', 'QR'],
-      href: '',
-      accent: 'backfire',
+      name: 'YaviBot',
+      eyebrow: 'Automatización académica',
+      description:
+        'Aplicación móvil híbrida para gestionar trámites académicos del Instituto Yavirac con validación de identidad, automatización y verificación mediante QR.',
+      problem:
+        'Trámites como certificados, anulaciones y reportes pueden implicar validaciones repetitivas, tiempos de espera y procesos manuales.',
+      solution:
+        'Una app Ionic/Angular con flujo de identidad por cédula y OTP, menús por rol y un backend construido directamente con workflows de n8n sobre PostgreSQL.',
+      technologies: ['Ionic 8', 'Angular 20', 'Capacitor 8', 'n8n', 'PostgreSQL 16'],
+      href: 'https://github.com/drewcrx/certificado-de-matricula-app',
+      accent: 'yavibot',
     },
     {
-      name: 'Rev Up',
-      eyebrow: 'Aplicación full stack',
-      description: 'Proyecto de aplicación que integra frontend, backend y servicios desplegados en un servidor.',
-      problem: 'Centralizar una experiencia completa requiere conectar interfaz, lógica y servicios de forma consistente.',
-      solution: 'Arquitectura con frontend y backend conectados, preparada para operar desde servicios desplegados.',
-      technologies: ['Frontend', 'Backend', 'API', 'Servidor'],
-      href: '',
+      name: 'RevUp',
+      eyebrow: 'Gestión de taller automotriz',
+      description:
+        'Aplicación web full stack para administrar vehículos, órdenes de trabajo, servicios, repuestos, pagos e historial de reparaciones de un taller.',
+      problem:
+        'La operación de un taller puede quedar dispersa entre registros de vehículos, reparaciones, órdenes, repuestos y pagos.',
+      solution:
+        'Frontend en Flutter Web conectado a una API REST con Node.js/Express y PostgreSQL, desplegado con Docker, Traefik, SSL y CI/CD mediante GitHub Actions.',
+      technologies: ['Flutter Web', 'Node.js / Express', 'PostgreSQL 16', 'Docker', 'GitHub Actions'],
+      href: 'https://github.com/drewcrx/RevUp',
       accent: 'revup',
     },
     {
-      name: 'YaviBot',
-      eyebrow: 'Automatización académica',
-      description: 'Solución digital orientada a procesos académicos, solicitudes y automatización de trámites institucionales.',
-      problem: 'Los procesos académicos repetitivos pueden generar fricción, tiempos de espera y tareas manuales.',
-      solution: 'Flujos digitales guiados que centralizan solicitudes, validaciones y automatizaciones para facilitar la gestión.',
-      technologies: ['Flutter', 'n8n', 'PostgreSQL', 'Automatización'],
-      href: '',
-      accent: 'yavibot',
+      name: 'Peluquería Canina SaaS',
+      eyebrow: 'SaaS multi-tenant',
+      description:
+        'Plataforma para que múltiples peluquerías caninas gestionen clientes, mascotas, citas, historial de servicios, empleados, inventario y caja.',
+      problem:
+        'Una plataforma para varios negocios necesita separar de forma segura los datos de cada peluquería y mantener una experiencia de gestión consistente.',
+      solution:
+        'Arquitectura multi-tenant con ASP.NET Core 8 y React, aislamiento por TenantId y PostgreSQL RLS, autenticación JWT y módulos habilitados según el plan.',
+      technologies: ['ASP.NET Core 8', 'React 18', 'TypeScript', 'PostgreSQL', 'Docker'],
+      href: 'https://github.com/drewcrx/peluqueria-canina',
+      accent: 'petcare',
     },
   ] satisfies Project[],
 }
