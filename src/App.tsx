@@ -188,7 +188,7 @@ function App() {
             <SectionHeading
               eyebrow="03 · PROYECTOS"
               title="Productos pensados desde el problema hasta la experiencia."
-              description="Tres proyectos reales que muestran desarrollo móvil, full stack, automatización e infraestructura. Los visuales son mockups ilustrativos; cada tarjeta enlaza al repositorio verificable del proyecto."
+              description="Tres proyectos reales que muestran desarrollo móvil, full stack, automatización e infraestructura. Explora capturas reales de cada producto y accede a su repositorio para conocer la implementación."
             />
           </Reveal>
           <div className="project-list">
